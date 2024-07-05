@@ -31,11 +31,11 @@ const App = () => {
 
   return (
     <div id="master">
-      <h5 className="heading">{/* display title here */}</h5>
+      <h5 className="heading">Select the gradient and then the Box to change the color</h5>
 
       <div className="row">
         {colourConfig.map((config, index) => (
-          <ColourSelector key={config.key} config={config} selectNextBackground={selectNextBackground} />
+          <ColourSelector key={config.key} className={config.classname} config={config} selectNextBackground={selectNextBackground} label={config.label} />
         ))}
       </div>
 
